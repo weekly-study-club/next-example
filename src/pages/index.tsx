@@ -14,7 +14,7 @@ const HomeScreen = () => {
     if (!isMouseDown || !canvasContext) return;
     const [x, y] = [e.clientX, e.clientY];
     canvasContext.beginPath();
-    canvasContext.moveTo(x * ratio, y * ratio);
+    canvasContext.moveTo(x, y);
   };
 
   const onMouseUp = () => {
@@ -27,7 +27,7 @@ const HomeScreen = () => {
     if (!isMouseDown || !canvasContext) return;
     const [x, y] = [e.clientX, e.clientY];
     canvasContext.strokeStyle = '1px';
-    canvasContext.lineTo(x * ratio, y * ratio);
+    canvasContext.lineTo(x, y);
     canvasContext.stroke();
   };
   
